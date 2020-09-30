@@ -238,11 +238,22 @@ h3{
   border: black solid 1px;
   border-radius: 10px 20px 30px 30px;
   box-shadow: -10px -20px 10px black;
+  transition: ease-in-out, transform 3s;
 }
 
+h3: hover{
+  transform: translate(10px,10px);
+}
 
+h3~p{
+  opacity:1;
+  transition: ease-in-out 3s, all 3s;
+}
 
-
+h3:active ~p{
+  opacity: 0;
+  transform: scale(0.2);
+}
 
 /**	05	Media  **/
 @media print{
